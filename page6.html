@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="favicon.png">
+
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+
+<script>
+  //Get the button
+  var mybutton = document.getElementById("myBtn");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+<div style="padding:10px 10px;height:1000px;">
+  <img src="logo.png" alt="Logo" style="float:left;width:210px;height:70px;">
+
+<ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="page2.html">Facilities</a></li>
+    <li><a href="page3.html">Courses</a></li>
+    <li><a href="page4.html">Pricing Information</a></li>
+    <li><a href="page5.html">Getting There</a></li>
+    <li><a class="active" href="page6.html">About Us</a></li>
+</ul>
+<br><br>
+<div class="header">
+    <h2 style="margin-bottom: 0px;">ABOUT US</h2>
+</div>
+
+<!-- The grid: three columns -->
+<div class="row3">
+    <div class="column3" onclick="openTab('b1');" style="background:#FF7D61;color:black;">Opening Hours</div>
+    <div class="column3" onclick="openTab('b2');" style="background:#FFA500;color:black;">Contact Information</div>
+    <div class="column3" onclick="openTab('b3');" style="background:#AEC300;color:black;">Feedback Form</div>
+</div>
+
+<div id="b1" class="containerTab" style="display:none;background:#FF7D61">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn3">x</span>
+    <h2 class = "subheader" style = "color: black;">Opening Hours</h2>
+    <p class ="words"> Weekdays: 11am to 11pm
+        <br>Weekends and Public Holidays: 9am to 9pm</p>
+</div>    
+
+<div id="b2" class="containerTab" style="display:none;background:#FFA500">
+    <span onclick="2his.parentElement.style.display='none'" class="closebtn3">x</span>
+    <h2 class = "subheader" style = "color: black;">Contact Information</h2>
+    <p class ="words"> Climb Central Sports Hub
+      <Br>  Kallang Wave Mall
+        <br>1 Stadium Place, #B1-01
+        <br> Singapore 397628
+       <br><br> Tel: 67027972
+        <br>Email: info@climbcentral.sg</p>
+</div>    
+
+<div id="b3" class="containerTab" style="display:none;background:#AEC300">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn3">x</span>
+    <h2 class = "subheader" style = "color: black;">Feedback Form</h2>
+    <div class="container3">
+        <form action="/action_page.php">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      
+          <label for="country">Topic</label>
+          <select id="country" name="country">
+            <option value="australia">General</option>
+            <option value="canada">Feedback</option>
+            <option value="usa">Testimonial</option>
+          </select>
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+</div>    
+
+<script>
+    function openTab(tabName) {
+      var i, x;
+      x = document.getElementsByClassName("containerTab");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      document.getElementById(tabName).style.display = "block";
+    }
+</script>
+
+<h2 class = "subheader">Click to follow Our Social Media!</h2>
+<a style = "background-color:hidden; margin-left: 625px" href="https://www.facebook.com/ClimbCentral/">
+<img src="facebook.png" alt="Facebook" style="width:60px;height:60px;">
+</a>
+
+<a style = "background-color:hidden" href="https://www.instagram.com/climbcentral/">
+<img src="instagram.png" alt="Instagram" style="width:60px;height:60px;background-color:hidden">
+</a>
+
+<a style = "background-color:hidden" href="https://twitter.com/climbcentral">
+    <img src="twitter.png" alt="Twitter" style="width:60px;height:60px;background-color:hidden">
+</a>
+
+<a style = "background-color:hidden" href="https://www.youtube.com/c/ClimbCentralSingapore">
+    <img src="youtube.png" alt="YouTube" style="width:70px;height:60px;background-color:hidden">
+</a>
+
+<p style=color:white;text-align:center;font-size:20px;>Copyright &copy; 2022 Climb Central</p>
+<p style=color:white;text-align:center;font-size:20px;>All Rights Reserved</p>
+
+</body>
+</html> 
